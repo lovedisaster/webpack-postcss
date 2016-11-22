@@ -1,0 +1,14 @@
+//Not in use now but will be configed in future.
+{
+  "use": [
+    "postcss-import",
+    "postcss-url",
+    "postcss-cssnext",
+    // add your "plugins" here
+    // ...
+    // and if you want to compress
+    // "cssnano",
+    "postcss-browser-reporter",
+    "postcss-reporter"
+  ]
+}

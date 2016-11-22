@@ -1,0 +1,15 @@
+
+h1{
+  color: var(--mainColor);
+  box-shadow: 5px 5px;
+  display:flex;
+  font-size:50px;
+}
+
+a {
+  color: color(red alpha(-10%));
+}
+
+a:hover {
+  color: color(red blackness(10%));
+}
