@@ -1,6 +1,6 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
-
+const webpack = require("webpack");
 module.exports = {
     context: path.resolve('assets'),
     entry: ["./entry.js"],
@@ -11,7 +11,12 @@ module.exports = {
     },
     watch:true,
     plugins:[
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin("styles.css"),
+        new webpack.ProvidePlugin({   
+            jQuery: 'jquery',
+            $: 'jquery',
+            jquery: 'jquery'
+        })
     ],
 
     devServer: {
@@ -23,7 +28,12 @@ module.exports = {
             {
               test: /\.css$/,
               exlude: /node_modules/,
-              loader: ExtractTextPlugin.extract("style-loader","css-loader!postcss-loader")
+              loader: ExtractTextPlugin.extract("style-loader","css-loader!postcss-loader?sourceMap")
+            },
+            {
+              test: /\.scss$/,
+              exlude: /node_modules/,
+              loader: ExtractTextPlugin.extract("style-loader","css-loader!postcss-loader?sourceMap")
             },
             {
                 test:   /\.js/,
@@ -37,6 +47,7 @@ module.exports = {
         require("postcss-import")({ addDependencyTo: webpack }),
         require("postcss-url")(),
         require("postcss-cssnext")(),
+        require("precss")(),
         // add your "plugins" here
         // ...
         // and if you want to compress,

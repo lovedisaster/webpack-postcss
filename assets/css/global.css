@@ -1,4 +1,9 @@
 :root {
-  --mainColor: blue;
+  --brandColor: #286090;
+  --navTopBG: #272727;
+  --fontGray: #ccc;
+  --fontGrayHover: #fff;
+  
+  --fontSizeSmall: 12px;
 }
 

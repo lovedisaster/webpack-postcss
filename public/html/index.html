@@ -3,9 +3,35 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="public/styles.css"/>
     </head>
+    
     <body>
+        <header role="banner">
+            <nav class="nav-top full-width">
+                <div class="container">
+                   <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Sell with us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact us</a></li> 
+                   </ul>
+                   <ul class="nav-top-right">
+                    <li class="search">
+                        <input type="text" placeholder="Search parts or keyword" class="vertical-center"/>
+                        <a><i class="fa fa-search vertical-center"></i></a>
+                    </li>
+                    <li class="cart">
+                        <span class="vertical-center">2</span>
+                        <i class="fa fa-shopping-cart vertical-center" aria-hidden="true"></i>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+        </header>
+
         <h1 id="heading">This is loading pretty well!</h1>
-        <a href="#">Click Me</a>
+        <a href="#" class="btn btn-default">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            Click Me
+        </a>
         <script type="text/javascript" src="public/bundle.js" charset="utf-8"></script>
     </body>
 </html>
